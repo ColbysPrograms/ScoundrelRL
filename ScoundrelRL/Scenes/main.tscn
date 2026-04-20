@@ -1,0 +1,221 @@
+[gd_scene format=3 uid="uid://c1mbrubebvbj1"]
+
+[ext_resource type="Script" uid="uid://vjp23kps5cul" path="res://Scripts/main.gd" id="1_ig7tw"]
+[ext_resource type="PackedScene" uid="uid://bi8a863sg007o" path="res://Scenes/card.tscn" id="2_0xm2m"]
+[ext_resource type="PackedScene" uid="uid://cbgr3plfkcgph" path="res://Scenes/hand.tscn" id="3_h2yge"]
+[ext_resource type="Texture2D" uid="uid://bu1o2t76xkct0" path="res://Assets/Back.png" id="4_lquwl"]
+[ext_resource type="Script" uid="uid://c03ph0f3qtd2o" path="res://Scripts/deck.gd" id="5_272bh"]
+[ext_resource type="Script" uid="uid://bwjsenfga6y76" path="res://Scripts/health.gd" id="6_4c57u"]
+[ext_resource type="PackedScene" uid="uid://dbjvwj4wjnast" path="res://Scenes/discard.tscn" id="6_7mycd"]
+[ext_resource type="Script" uid="uid://dxnmvjvoqmhkw" path="res://Scripts/discard.gd" id="7_272bh"]
+[ext_resource type="PackedScene" uid="uid://bv822ftj0cmth" path="res://Scenes/weapon.tscn" id="8_kek77"]
+[ext_resource type="Script" uid="uid://cl4iln0gsejd" path="res://Scripts/weapon.gd" id="9_4c57u"]
+[ext_resource type="Script" uid="uid://cr31jkok73j0w" path="res://Scripts/run_button.gd" id="12_dg77c"]
+[ext_resource type="Script" uid="uid://cfdfjaictif64" path="res://Scripts/ai_controller_2d.gd" id="13_fdnlq"]
+[ext_resource type="Script" uid="uid://208vk0e41728" path="res://addons/godot_rl_agents/sync.gd" id="15_k12tt"]
+
+[sub_resource type="GDScript" id="GDScript_fdnlq"]
+script/source = "extends Node
+
+@onready var main: Main = $\"..\"
+@onready var hand: Hand = %Hand
+@onready var health: Health = %Health
+@onready var weapon: Weapon = %Weapon
+@onready var run_button: Run = %RunButton
+
+#Choices
+var card_choice: int = 0
+var run_choice: bool = false
+
+#Hyperparameters
+var alpha: float = 0.9
+var gamma: float = 0.95
+var epsilon: float = 1.0
+var epsilon_decay: float = 0.9995
+var epsilon_min: float = 0.01
+var num_episodes: int = 1000000
+var max_steps: int = 200
+
+#Environment
+#can run + 20 health values + 9 weapon.weapon_values + 13 weapon.monster_values +
+#4 cards * (9 weapons + 9 heals + 13 monsters)
+var observation_space: int = 1 + 20 + 9 + 13 + 4 * ( 9 + 9 + 13)
+#0 = run, 1-4 = card postitions
+var action_space: int = 5
+var qtable: Array[Array] = []
+
+var done: bool = false
+var reward: int = 0
+
+func init_qtable():
+	var zeros: Array[float] = []
+	zeros.resize(observation_space)
+	zeros.fill(0.0)
+	qtable.resize(action_space)
+	qtable.fill(zeros)
+
+func get_state() -> Array[int]:
+	var state: Array[int] = []
+	
+	state.append(run_button.disabled)
+	
+	var health_array:Array[int] = []
+	health_array.resize(20)
+	health_array.fill(0)
+	if health.value != 0:
+		health_array[health.value - 1] = 1
+	state.append_array(health_array)
+	
+	var weapon_array: Array[int] = []
+	weapon_array.resize(9)
+	weapon_array.fill(0)
+	if weapon.weapon_value != 0:
+		weapon_array[weapon.weapon_value - 1 - 1] = 1
+	state.append_array(weapon_array)
+	
+	var monster_array: Array[int] = []
+	monster_array.resize(13)
+	monster_array.fill(0)
+	if weapon.monster_value != 0:
+		monster_array[weapon.monster_value - 1 - 1] = 1
+	state.append_array(monster_array)
+	
+	for i in range(4):
+		var card_array: Array[int] = []
+		card_array.resize(13 + 9 + 9)
+		card_array.fill(0)
+		if i < hand.get_children().size():
+			var current_card: Card = hand.get_children()[i] as Card
+			if current_card.purpose == \"Monster\":
+				#Min value 2 Max value 14 so it's 14 - 2, 0-12
+				card_array[current_card.value - 2] = 1
+			if current_card.purpose == \"Weapon\":
+				#Min value 13
+				card_array[13 + current_card.value - 2] = 1
+			if current_card.purpose == \"Heal\":
+				#Min value 9 + 13
+				card_array[9 + 13 + current_card.value - 2] = 1
+		state.append_array(card_array)
+	#await get_tree().create_timer(1.0).timeout
+	return state
+
+func set_action(state) -> int:
+	if (randi() % 10000) / 10000.0 < epsilon:
+		return randi_range(0, action_space - 1)
+	else:
+		var column_sums: Array[float] = []
+		for i in range(action_space):
+			var total: float = 0
+			for j in state.size():
+				if state[j] == 1:
+					total += qtable.get(i).get(j)
+			column_sums.append(total)
+		var max_sum = column_sums[0]
+		var max_index:Array = [0]
+		for i in range(1, column_sums.size()):
+			if max_sum < column_sums[i]:
+				max_sum = column_sums[i]
+				max_index.resize(1)
+				max_index = [i]
+			elif max_sum == column_sums[i]:
+				max_index.append(i)
+		if max_index.size() > 1:
+			max_index[0] = max_index.pick_random()
+		return max_index[0]
+
+func run_simulation():
+	init_qtable()
+	for episode in range(num_episodes):
+		#var state: Array[int] = await(get_state())
+		var state: Array[int] = get_state()
+		done = false
+		for step in range(1, max_steps):
+			reward = 0
+			var action = set_action(state)
+			main.action = action
+			#var next_state = await(get_state())
+			var next_state = get_state()
+			var next_action = set_action(next_state)
+			for i in state.size():
+				if state[i] == 1:
+					pass
+					qtable[action][i] = (1 - alpha) * qtable[action][i] + alpha * (reward + gamma * qtable[next_action][i] - qtable[action][i])
+			state = next_state
+			if done:
+				break
+		epsilon = clamp(epsilon * epsilon_decay, epsilon_min, 1)
+"
+
+[node name="Main" type="Node2D" unique_id=2010746161]
+script = ExtResource("1_ig7tw")
+
+[node name="TablePolygon" type="Polygon2D" parent="." unique_id=1709597712]
+color = Color(7.893444e-06, 0.7300159, 7.70092e-07, 1)
+polygon = PackedVector2Array(0, 0, 0, 648, 1152, 648, 1152, 0)
+
+[node name="Hand" parent="." unique_id=455715209 instance=ExtResource("3_h2yge")]
+unique_name_in_owner = true
+anchors_preset = -1
+anchor_right = 0.85
+offset_left = 403.0
+offset_top = 54.0
+offset_right = 802.99994
+offset_bottom = 253.99998
+
+[node name="Deck" type="Sprite2D" parent="." unique_id=1690094999]
+unique_name_in_owner = true
+position = Vector2(250, 150)
+scale = Vector2(5, 5)
+texture = ExtResource("4_lquwl")
+region_rect = Rect2(0, 0, 32, 32)
+script = ExtResource("5_272bh")
+cardScene = ExtResource("2_0xm2m")
+
+[node name="Health" type="Label" parent="." unique_id=498181266]
+unique_name_in_owner = true
+texture_filter = 1
+offset_left = 177.0
+offset_top = 242.0
+offset_right = 256.0
+offset_bottom = 265.0
+scale = Vector2(2, 2)
+text = "Health: 20"
+script = ExtResource("6_4c57u")
+
+[node name="Discard" parent="." unique_id=1550734076 instance=ExtResource("6_7mycd")]
+unique_name_in_owner = true
+position = Vector2(1012, 141)
+script = ExtResource("7_272bh")
+
+[node name="Weapon" parent="." unique_id=549024921 instance=ExtResource("8_kek77")]
+unique_name_in_owner = true
+position = Vector2(565, 441)
+script = ExtResource("9_4c57u")
+
+[node name="RunButton" type="Button" parent="." unique_id=1513820283]
+unique_name_in_owner = true
+offset_left = 180.0
+offset_top = 306.0
+offset_right = 313.0
+offset_bottom = 337.0
+text = "Run From Room"
+script = ExtResource("12_dg77c")
+
+[node name="AIController2D" type="Node2D" parent="." unique_id=839806421]
+unique_name_in_owner = true
+script = ExtResource("13_fdnlq")
+onnx_model_path = "model.onnx"
+metadata/_custom_type_script = "uid://b01afbc3lptgc"
+
+[node name="AIController" type="Node" parent="." unique_id=2114942074]
+unique_name_in_owner = true
+script = SubResource("GDScript_fdnlq")
+
+[node name="Sync" type="Node" parent="." unique_id=924507965]
+script = ExtResource("15_k12tt")
+control_mode = 0
+action_repeat = 1
+onnx_model_path = "model.onnx"
+metadata/_custom_type_script = "uid://208vk0e41728"
+
+[connection signal="pressed" from="RunButton" to="RunButton" method="_on_pressed"]

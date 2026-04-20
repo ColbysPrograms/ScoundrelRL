@@ -1,0 +1,75 @@
+[gd_scene format=3 uid="uid://c1mbrubebvbj1"]
+
+[ext_resource type="Script" uid="uid://vjp23kps5cul" path="res://Scripts/main.gd" id="1_ig7tw"]
+[ext_resource type="PackedScene" uid="uid://bi8a863sg007o" path="res://Scenes/card.tscn" id="2_0xm2m"]
+[ext_resource type="PackedScene" uid="uid://cbgr3plfkcgph" path="res://Scenes/hand.tscn" id="3_h2yge"]
+[ext_resource type="Texture2D" uid="uid://bu1o2t76xkct0" path="res://Assets/Back.png" id="4_lquwl"]
+[ext_resource type="Script" uid="uid://c03ph0f3qtd2o" path="res://Scripts/deck.gd" id="5_272bh"]
+[ext_resource type="Script" uid="uid://bwjsenfga6y76" path="res://Scripts/health.gd" id="6_4c57u"]
+[ext_resource type="PackedScene" uid="uid://dbjvwj4wjnast" path="res://Scenes/discard.tscn" id="6_7mycd"]
+[ext_resource type="Script" uid="uid://dxnmvjvoqmhkw" path="res://Scripts/discard.gd" id="7_272bh"]
+[ext_resource type="PackedScene" uid="uid://bv822ftj0cmth" path="res://Scenes/weapon.tscn" id="8_kek77"]
+[ext_resource type="Script" uid="uid://cl4iln0gsejd" path="res://Scripts/weapon.gd" id="9_4c57u"]
+[ext_resource type="PackedScene" uid="uid://bcwukotqst4kv" path="res://Scenes/game_over.tscn" id="11_efxa6"]
+[ext_resource type="Script" uid="uid://cr31jkok73j0w" path="res://Scripts/run_button.gd" id="12_dg77c"]
+
+[node name="Main" type="Node2D" unique_id=2010746161]
+script = ExtResource("1_ig7tw")
+
+[node name="TablePolygon" type="Polygon2D" parent="." unique_id=1709597712]
+color = Color(7.893444e-06, 0.7300159, 7.70092e-07, 1)
+polygon = PackedVector2Array(0, 0, 0, 648, 1152, 648, 1152, 0)
+
+[node name="Hand" parent="." unique_id=455715209 instance=ExtResource("3_h2yge")]
+unique_name_in_owner = true
+anchors_preset = -1
+anchor_right = 0.85
+offset_left = 403.0
+offset_top = 54.0
+offset_right = 802.99994
+offset_bottom = 253.99998
+
+[node name="Deck" type="Sprite2D" parent="." unique_id=1690094999]
+unique_name_in_owner = true
+position = Vector2(250, 150)
+scale = Vector2(5, 5)
+texture = ExtResource("4_lquwl")
+region_rect = Rect2(0, 0, 32, 32)
+script = ExtResource("5_272bh")
+cardScene = ExtResource("2_0xm2m")
+
+[node name="Health" type="Label" parent="." unique_id=498181266]
+unique_name_in_owner = true
+texture_filter = 1
+offset_left = 177.0
+offset_top = 242.0
+offset_right = 256.0
+offset_bottom = 265.0
+scale = Vector2(2, 2)
+text = "Health: 20"
+script = ExtResource("6_4c57u")
+
+[node name="Discard" parent="." unique_id=1550734076 instance=ExtResource("6_7mycd")]
+unique_name_in_owner = true
+position = Vector2(1012, 141)
+script = ExtResource("7_272bh")
+
+[node name="Weapon" parent="." unique_id=549024921 instance=ExtResource("8_kek77")]
+unique_name_in_owner = true
+position = Vector2(565, 441)
+script = ExtResource("9_4c57u")
+
+[node name="Game Over" parent="." unique_id=2125735773 instance=ExtResource("11_efxa6")]
+unique_name_in_owner = true
+visible = false
+
+[node name="RunButton" type="Button" parent="." unique_id=1513820283]
+unique_name_in_owner = true
+offset_left = 180.0
+offset_top = 306.0
+offset_right = 313.0
+offset_bottom = 337.0
+text = "Run From Room"
+script = ExtResource("12_dg77c")
+
+[connection signal="pressed" from="RunButton" to="RunButton" method="_on_pressed"]

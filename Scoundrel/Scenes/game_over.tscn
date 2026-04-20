@@ -1,0 +1,51 @@
+[gd_scene format=3 uid="uid://bcwukotqst4kv"]
+
+[ext_resource type="Script" uid="uid://b2c4h8wtxpog4" path="res://Scripts/game_over.gd" id="1_y26ei"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_y26ei"]
+font_size = 48
+
+[node name="Game Over" type="CanvasLayer" unique_id=2125735773]
+script = ExtResource("1_y26ei")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=421747863]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.39215687)
+
+[node name="PanelContainer" type="PanelContainer" parent="ColorRect" unique_id=1442754667]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -138.0
+offset_top = -33.5
+offset_right = 138.0
+offset_bottom = 33.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="ColorRect/PanelContainer" unique_id=991955516]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect/PanelContainer/MarginContainer" unique_id=1716691288]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="ColorRect/PanelContainer/MarginContainer/VBoxContainer" unique_id=1840632347]
+unique_name_in_owner = true
+layout_mode = 2
+text = "GAME OVER"
+label_settings = SubResource("LabelSettings_y26ei")
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="ColorRect/PanelContainer/MarginContainer/VBoxContainer" unique_id=1058568750]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Play Again?"
+
+[connection signal="pressed" from="ColorRect/PanelContainer/MarginContainer/VBoxContainer/Button" to="." method="_on_button_pressed"]

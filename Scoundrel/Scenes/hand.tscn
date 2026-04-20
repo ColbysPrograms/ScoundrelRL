@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://cbgr3plfkcgph"]
+
+[ext_resource type="Script" uid="uid://dhhuwjlj70r8p" path="res://Scripts/hand.gd" id="1_u4p2i"]
+[ext_resource type="PackedScene" uid="uid://bi8a863sg007o" path="res://Scenes/card.tscn" id="2_bfasp"]
+
+[node name="Hand" type="ColorRect" unique_id=1199524340]
+offset_right = 400.0
+offset_bottom = 200.0
+color = Color(0, 0.5921569, 0, 1)
+script = ExtResource("1_u4p2i")
+cardScene = ExtResource("2_bfasp")

@@ -1,0 +1,13 @@
+res://addons/godot_rl_agents/sensors/sensors_2d/ExampleRaycastSensor2D.tscn::4a649f4ee03353fd41c8b2326af068e1::1775455099::res://.godot/exported/133200997/export-5127fc3fc2907f1e87ac8e869558593d-ExampleRaycastSensor2D.scn
+res://addons/godot_rl_agents/sensors/sensors_2d/RaycastSensor2D.tscn::5706ef859d8416e150e326b319953fcf::1775455099::res://.godot/exported/133200997/export-7454c66d21916090bf5dc7766fa8629a-RaycastSensor2D.scn
+res://addons/godot_rl_agents/sensors/sensors_2d/RGBCameraSensor2D.tscn::ffef23f5f5b1fc1bc280f2decb923073::1775455099::res://.godot/exported/133200997/export-d1e0b66cfc8765e1faf3c7e176c1c714-RGBCameraSensor2D.scn
+res://addons/godot_rl_agents/sensors/sensors_3d/ExampleRaycastSensor3D.tscn::5132e3ace4e34f1809af5ab3b83b467f::1775455099::res://.godot/exported/133200997/export-1222b1ceeacbc57c3f8fe0e4235d9be0-ExampleRaycastSensor3D.scn
+res://addons/godot_rl_agents/sensors/sensors_3d/RaycastSensor3D.tscn::73592af2d7e70a30c90f7381c18e88b7::1775455099::res://.godot/exported/133200997/export-1cc1ad7ce1f98ed0c4cee4b060bc26fd-RaycastSensor3D.scn
+res://addons/godot_rl_agents/sensors/sensors_3d/RGBCameraSensor3D.tscn::a50bb2ce4f257d79366df6f5e2f738ea::1775455099::res://.godot/exported/133200997/export-d1d9cc1906d18d9a32f853b74a4d90f4-RGBCameraSensor3D.scn
+res://Scenes/batch.tscn::43317ff085e7a870a7b7946c192a94ee::1775650924::res://.godot/exported/133200997/export-c28763eb1272831c0bc45328e875077c-batch.scn
+res://Scenes/card.tscn::7db2e7b73ebb5b6ccdb6e6cc07721e90::1775453356::res://.godot/exported/133200997/export-6164b85705e461c985fb5e8da7a8746d-card.scn
+res://Scenes/discard.tscn::d925d62bb036090a9fa1b4a348cc5ef3::1774321397::res://.godot/exported/133200997/export-f27cb2728d5858c3c74cb6abb2393938-discard.scn
+res://Scenes/game_over.tscn::5eb72210398d8f7a0b43addb5db15b84::1775496489::res://.godot/exported/133200997/export-33c320c97f44f546398d5119030678b4-game_over.scn
+res://Scenes/hand.tscn::1a3915b6761c4a02b7c819b4f2739531::1775453366::res://.godot/exported/133200997/export-982c59ee2a4532b418fb470937e0e9a9-hand.scn
+res://Scenes/main.tscn::7d78628eb9ea2a632723fcc86ad37c91::1776649339::res://.godot/exported/133200997/export-2ddd04d543d5858e7f20c9299a8b5096-main.scn
+res://Scenes/weapon.tscn::e6c7050d566485aa6c753b1568f50e78::1774322312::res://.godot/exported/133200997/export-9f0c5b6137f4d089f608c034e9ba81c0-weapon.scn

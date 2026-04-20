@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://bi8a863sg007o"]
+
+[ext_resource type="Texture2D" uid="uid://dgwxfbr3h0ikt" path="res://Assets/Base.png" id="1_kikvd"]
+[ext_resource type="Script" uid="uid://bdjggwsfpmeva" path="res://Scripts/card.gd" id="1_q5obu"]
+[ext_resource type="Texture2D" uid="uid://v8k8jov2166s" path="res://Assets/Cards.png" id="2_rjlel"]
+
+[node name="Card" type="Node2D" unique_id=849216617]
+scale = Vector2(5, 5)
+script = ExtResource("1_q5obu")
+
+[node name="CardBase" type="Sprite2D" parent="." unique_id=823154932]
+unique_name_in_owner = true
+texture = ExtResource("1_kikvd")
+
+[node name="Button" type="Button" parent="CardBase" unique_id=1539288986]
+unique_name_in_owner = true
+self_modulate = Color(1, 1, 1, 0)
+offset_left = -7.9999995
+offset_top = -11.999999
+offset_bottom = -3.999999
+scale = Vector2(1.9919999, 2.992)
+
+[node name="CardDisplay" type="Node2D" parent="." unique_id=56270887]
+unique_name_in_owner = true
+position = Vector2(-3.5, -7.5)
+
+[node name="Value" type="Sprite2D" parent="CardDisplay" unique_id=877635596]
+unique_name_in_owner = true
+texture = ExtResource("2_rjlel")
+region_enabled = true
+region_rect = Rect2(0, 0, 5, 5)
+
+[node name="Suit" type="Sprite2D" parent="CardDisplay" unique_id=1286667053]
+unique_name_in_owner = true
+position = Vector2(0, 6)
+texture = ExtResource("2_rjlel")
+region_enabled = true
+region_rect = Rect2(0, 5, 5, 5)
+
+[connection signal="pressed" from="CardBase/Button" to="." method="_on_button_pressed"]

@@ -1,0 +1,19 @@
+{
+  "version": 2,
+  "dgSpecHash": "/dZPxza4Ya0=",
+  "success": true,
+  "projectFilePath": "/home/colby/Documents/godot/scoundrel/Scoundrel.csproj",
+  "expectedPackageFiles": [
+    "/home/colby/.nuget/packages/godot.sourcegenerators/4.6.2/godot.sourcegenerators.4.6.2.nupkg.sha512",
+    "/home/colby/.nuget/packages/godotsharp/4.6.2/godotsharp.4.6.2.nupkg.sha512",
+    "/home/colby/.nuget/packages/microsoft.ml.onnxruntime/1.24.4/microsoft.ml.onnxruntime.1.24.4.nupkg.sha512",
+    "/home/colby/.nuget/packages/microsoft.ml.onnxruntime.managed/1.24.4/microsoft.ml.onnxruntime.managed.1.24.4.nupkg.sha512",
+    "/home/colby/.nuget/packages/system.memory/4.5.5/system.memory.4.5.5.nupkg.sha512",
+    "/home/colby/.nuget/packages/system.numerics.tensors/9.0.0/system.numerics.tensors.9.0.0.nupkg.sha512",
+    "/home/colby/.nuget/packages/microsoft.netcore.app.ref/8.0.25/microsoft.netcore.app.ref.8.0.25.nupkg.sha512",
+    "/home/colby/.nuget/packages/microsoft.netcore.app.runtime.linux-x64/8.0.25/microsoft.netcore.app.runtime.linux-x64.8.0.25.nupkg.sha512",
+    "/home/colby/.nuget/packages/microsoft.aspnetcore.app.ref/8.0.25/microsoft.aspnetcore.app.ref.8.0.25.nupkg.sha512",
+    "/home/colby/.nuget/packages/microsoft.aspnetcore.app.runtime.linux-x64/8.0.25/microsoft.aspnetcore.app.runtime.linux-x64.8.0.25.nupkg.sha512"
+  ],
+  "logs": []
+}
