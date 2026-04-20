@@ -2,7 +2,7 @@
 There are two Godot projects uploaded. The first (Scoundrel) is just the base game without any of the Reinforcement Learning elements. The second (ScoundrelRL) includes all of the Reinforcement Learning elements and can be used with run_model.py to perform reinforcement learning with the game.
 
 ## Scoundrel Game
-The game itself can be played at (garfoo.itch.io/scoundrel)
+The game itself can be played at <garfoo.itch.io/scoundrel>
 
 ## Reinforcment Learning Guide
 To use this project:
