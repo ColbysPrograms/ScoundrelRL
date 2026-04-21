@@ -1,0 +1,17 @@
+[0] Config.pm:328> INFO - This is Biber 2.21
+[0] Config.pm:331> INFO - Logfile is 'Cox_MM_Presentation.blg'
+[66] biber:342> INFO - === Mon Apr 20, 2026, 11:43:12
+[80] Biber.pm:421> INFO - Reading 'Cox_MM_Presentation.bcf'
+[152] Biber.pm:999> INFO - Using all citekeys in bib section 0
+[168] Biber.pm:4487> INFO - Processing section 0
+[177] Biber.pm:4678> INFO - Looking for bibtex file 'references.bib' for section 0
+[177] bibtex.pm:1713> INFO - LaTeX decoding ...
+[186] bibtex.pm:1519> INFO - Found BibTeX data source 'references.bib'
+[300] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[300] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[300] Biber.pm:4307> INFO - Sorting list 'nty/global//global/global/global' of type 'entry' with template 'nty' and locale 'en-US'
+[300] Biber.pm:4313> INFO - No sort tailoring available for locale 'en-US'
+[315] bbl.pm:676> INFO - Writing 'Cox_MM_Presentation.bbl' with encoding 'UTF-8'
+[321] bbl.pm:779> INFO - Output to Cox_MM_Presentation.bbl
+[321] Biber.pm:132> WARN - legacy month field 'August' in entry 'Rules' is not an integer - this will probably not sort properly.
+[321] Biber.pm:134> INFO - WARNINGS: 1

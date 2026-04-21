@@ -1,0 +1,376 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nty/global//global/global/global}
+    \entry{beeching_godot_nodate}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=a808806062951f806149ec504e4161fd}{%
+           family={Beeching},
+           familyi={B\bibinitperiod},
+           given={Edward},
+           giveni={E\bibinitperiod}}}%
+      }
+      \strng{namehash}{a808806062951f806149ec504e4161fd}
+      \strng{fullhash}{a808806062951f806149ec504e4161fd}
+      \strng{fullhashraw}{a808806062951f806149ec504e4161fd}
+      \strng{bibnamehash}{a808806062951f806149ec504e4161fd}
+      \strng{authorbibnamehash}{a808806062951f806149ec504e4161fd}
+      \strng{authornamehash}{a808806062951f806149ec504e4161fd}
+      \strng{authorfullhash}{a808806062951f806149ec504e4161fd}
+      \strng{authorfullhashraw}{a808806062951f806149ec504e4161fd}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{An Open Source package that allows video game creators, AI researchers and hobbyists the opportunity to learn complex behaviors for their Non Player Characters or agents}
+      \field{month}{2}
+      \field{note}{original-date: 2021-07-01T14:04:11Z}
+      \field{title}{Godot RL Agents}
+      \field{urlday}{19}
+      \field{urlmonth}{4}
+      \field{urlyear}{2026}
+      \field{year}{2025}
+      \field{urldateera}{ce}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://github.com/edbeeching/godot_rl_agents
+      \endverb
+      \verb{url}
+      \verb https://github.com/edbeeching/godot_rl_agents
+      \endverb
+      \keyw{reinforcement-learning,simulation,godot}
+    \endentry
+    \entry{brunton_data-driven_2019}{book}{}{}
+      \name{author}{2}{}{%
+        {{hash=572af75cb67759c9684ffbb4d11cddf8}{%
+           family={Brunton},
+           familyi={B\bibinitperiod},
+           given={Steven\bibnamedelima L.},
+           giveni={S\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+        {{hash=39878c41ca2338687a0064bcc2ba2922}{%
+           family={Kutz},
+           familyi={K\bibinitperiod},
+           given={J.\bibnamedelimi Nathan},
+           giveni={J\bibinitperiod\bibinitdelim N\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {eng}%
+      }
+      \list{location}{1}{%
+        {Cambridge New York, NY Port Melbourne New Delhi Singapore}%
+      }
+      \list{publisher}{1}{%
+        {Cambridge University Press}%
+      }
+      \strng{namehash}{30df7fd58c3ce66638d5f915c5667db4}
+      \strng{fullhash}{30df7fd58c3ce66638d5f915c5667db4}
+      \strng{fullhashraw}{30df7fd58c3ce66638d5f915c5667db4}
+      \strng{bibnamehash}{30df7fd58c3ce66638d5f915c5667db4}
+      \strng{authorbibnamehash}{30df7fd58c3ce66638d5f915c5667db4}
+      \strng{authornamehash}{30df7fd58c3ce66638d5f915c5667db4}
+      \strng{authorfullhash}{30df7fd58c3ce66638d5f915c5667db4}
+      \strng{authorfullhashraw}{30df7fd58c3ce66638d5f915c5667db4}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{"Data-driven discovery is revolutionizing the modelling, prediction, and control of complex systems. This textbook brings together machine learning, engineering mathematics, and mathematical physics to integrate modelling and control of dynamical systems with modern methods in data science. It highlights many of the recent advances in scientific computing that enable data-driven methods to be applied to a diverse range of complex systems, such as turbulence, the brain, climate, epidemiology, finance, robotics, and autonomy. Aimed at advanced undergraduate and beginning graduate students in the engineering and physical sciences, the text presents a range of topics and methods from introductory to state of the art"--}
+      \field{isbn}{9781108422093}
+      \field{shorttitle}{Data-driven science and engineering}
+      \field{title}{Data-driven science and engineering: machine learning, dynamical systems, and control}
+      \field{year}{2019}
+      \true{nocite}
+    \endentry
+    \entry{Rules}{misc}{}{}
+      \name{author}{2}{}{%
+        {{hash=08f61ab1aaf9da6ba63f780f5add5ccf}{%
+           family={Gage},
+           familyi={G\bibinitperiod},
+           given={Zach},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=f1724a5da9337ab0a9b0f207bbfa455d}{%
+           family={Bieg},
+           familyi={B\bibinitperiod},
+           given={Kurt},
+           giveni={K\bibinitperiod}}}%
+      }
+      \strng{namehash}{57cb6b7cf7edb108f571277c9c84c6be}
+      \strng{fullhash}{57cb6b7cf7edb108f571277c9c84c6be}
+      \strng{fullhashraw}{57cb6b7cf7edb108f571277c9c84c6be}
+      \strng{bibnamehash}{57cb6b7cf7edb108f571277c9c84c6be}
+      \strng{authorbibnamehash}{57cb6b7cf7edb108f571277c9c84c6be}
+      \strng{authornamehash}{57cb6b7cf7edb108f571277c9c84c6be}
+      \strng{authorfullhash}{57cb6b7cf7edb108f571277c9c84c6be}
+      \strng{authorfullhashraw}{57cb6b7cf7edb108f571277c9c84c6be}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{8}
+      \field{title}{Scoundrel - Version 1.0}
+      \field{year}{2011}
+      \true{nocite}
+      \verb{urlraw}
+      \verb http://www.stfj.net/art/2011/Scoundrel.pdf
+      \endverb
+      \verb{url}
+      \verb http://www.stfj.net/art/2011/Scoundrel.pdf
+      \endverb
+    \endentry
+    \entry{mnih_playing_2013}{misc}{}{}
+      \name{author}{7}{}{%
+        {{hash=f7d23cfe4ca0e6bf7a8c251bfa78aca6}{%
+           family={Mnih},
+           familyi={M\bibinitperiod},
+           given={Volodymyr},
+           giveni={V\bibinitperiod}}}%
+        {{hash=481308b301166b521c74fde6566e97e6}{%
+           family={Kavukcuoglu},
+           familyi={K\bibinitperiod},
+           given={Koray},
+           giveni={K\bibinitperiod}}}%
+        {{hash=89dbd30410c2085cd059f32c57d4593e}{%
+           family={Silver},
+           familyi={S\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+        {{hash=dfca94b0427da7f9088af596e23b46c0}{%
+           family={Graves},
+           familyi={G\bibinitperiod},
+           given={Alex},
+           giveni={A\bibinitperiod}}}%
+        {{hash=af540e84ef1ecdaa70b1f7c90f59fd7d}{%
+           family={Antonoglou},
+           familyi={A\bibinitperiod},
+           given={Ioannis},
+           giveni={I\bibinitperiod}}}%
+        {{hash=d7805381550fb5f8360345f7f72c0b49}{%
+           family={Wierstra},
+           familyi={W\bibinitperiod},
+           given={Daan},
+           giveni={D\bibinitperiod}}}%
+        {{hash=9449802bcb467309c0ebced658096818}{%
+           family={Riedmiller},
+           familyi={R\bibinitperiod},
+           given={Martin},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {arXiv}%
+      }
+      \strng{namehash}{aff24b211b34cdd515b2fd148ce0c920}
+      \strng{fullhash}{2860d669102abb5e113bf4232d6d5997}
+      \strng{fullhashraw}{2860d669102abb5e113bf4232d6d5997}
+      \strng{bibnamehash}{aff24b211b34cdd515b2fd148ce0c920}
+      \strng{authorbibnamehash}{aff24b211b34cdd515b2fd148ce0c920}
+      \strng{authornamehash}{aff24b211b34cdd515b2fd148ce0c920}
+      \strng{authorfullhash}{2860d669102abb5e113bf4232d6d5997}
+      \strng{authorfullhashraw}{2860d669102abb5e113bf4232d6d5997}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{We present the first deep learning model to successfully learn control policies directly from high-dimensional sensory input using reinforcement learning. The model is a convolutional neural network , trained with a variant of Q-learning, whose input is raw pixels and whose output is a value function estimating future rewards. We apply our method to seven Atari 2600 games from the Arcade Learning Environment, with no adjustment of the architecture or learning algorithm. We find that it outperforms all previous approaches on six of the games and surpasses a human expert on three of them.}
+      \field{month}{12}
+      \field{note}{arXiv:1312.5602}
+      \field{title}{Playing {Atari} with {Deep} {Reinforcement} {Learning}}
+      \field{urlday}{18}
+      \field{urlmonth}{4}
+      \field{urlyear}{2026}
+      \field{year}{2013}
+      \field{urldateera}{ce}
+      \true{nocite}
+      \verb{doi}
+      \verb 10.48550/arXiv.1312.5602
+      \endverb
+      \verb{urlraw}
+      \verb http://arxiv.org/abs/1312.5602
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/1312.5602
+      \endverb
+      \keyw{Computer Science - Machine Learning}
+    \endentry
+    \entry{stable-baselines3}{article}{}{}
+      \name{author}{6}{}{%
+        {{hash=646dfae388f2fca3d68ff9214acd722c}{%
+           family={Raffin},
+           familyi={R\bibinitperiod},
+           given={Antonin},
+           giveni={A\bibinitperiod}}}%
+        {{hash=165a914db6ae4e223ac87e4baef87090}{%
+           family={Hill},
+           familyi={H\bibinitperiod},
+           given={Ashley},
+           giveni={A\bibinitperiod}}}%
+        {{hash=f443af3aea10cb9b968ba9d4c0dcbd0d}{%
+           family={Gleave},
+           familyi={G\bibinitperiod},
+           given={Adam},
+           giveni={A\bibinitperiod}}}%
+        {{hash=2c6bdcb44a478971ad9b3b007535f034}{%
+           family={Kanervisto},
+           familyi={K\bibinitperiod},
+           given={Anssi},
+           giveni={A\bibinitperiod}}}%
+        {{hash=b76527a76a4bb1c475b635a35021d0ef}{%
+           family={Ernestus},
+           familyi={E\bibinitperiod},
+           given={Maximilian},
+           giveni={M\bibinitperiod}}}%
+        {{hash=cfc1b2bcb8937cfd9453ed45243e18f2}{%
+           family={Dormann},
+           familyi={D\bibinitperiod},
+           given={Noah},
+           giveni={N\bibinitperiod}}}%
+      }
+      \strng{namehash}{5044a4768c7fc20f25fb680bb11f4aaf}
+      \strng{fullhash}{e3c43789f8de334374c8e95d9d514552}
+      \strng{fullhashraw}{e3c43789f8de334374c8e95d9d514552}
+      \strng{bibnamehash}{5044a4768c7fc20f25fb680bb11f4aaf}
+      \strng{authorbibnamehash}{5044a4768c7fc20f25fb680bb11f4aaf}
+      \strng{authornamehash}{5044a4768c7fc20f25fb680bb11f4aaf}
+      \strng{authorfullhash}{e3c43789f8de334374c8e95d9d514552}
+      \strng{authorfullhashraw}{e3c43789f8de334374c8e95d9d514552}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Machine Learning Research}
+      \field{number}{268}
+      \field{title}{Stable-Baselines3: Reliable Reinforcement Learning Implementations}
+      \field{volume}{22}
+      \field{year}{2021}
+      \true{nocite}
+      \field{pages}{1\bibrangedash 8}
+      \range{pages}{8}
+      \verb{urlraw}
+      \verb http://jmlr.org/papers/v22/20-1364.html
+      \endverb
+      \verb{url}
+      \verb http://jmlr.org/papers/v22/20-1364.html
+      \endverb
+    \endentry
+    \entry{schulman_proximal_2017}{misc}{}{}
+      \name{author}{5}{}{%
+        {{hash=3e09bd2a25d237ebdaed560a07c0451e}{%
+           family={Schulman},
+           familyi={S\bibinitperiod},
+           given={John},
+           giveni={J\bibinitperiod}}}%
+        {{hash=674ede0b9cd02a2bf5fc662972efb9f0}{%
+           family={Wolski},
+           familyi={W\bibinitperiod},
+           given={Filip},
+           giveni={F\bibinitperiod}}}%
+        {{hash=4164e43d8cf919f5e3f8d80f5ea23f36}{%
+           family={Dhariwal},
+           familyi={D\bibinitperiod},
+           given={Prafulla},
+           giveni={P\bibinitperiod}}}%
+        {{hash=a812c46caad94fc8701be37871f303ba}{%
+           family={Radford},
+           familyi={R\bibinitperiod},
+           given={Alec},
+           giveni={A\bibinitperiod}}}%
+        {{hash=be38507da6ab98e7ac01ac2c6b7e13eb}{%
+           family={Klimov},
+           familyi={K\bibinitperiod},
+           given={Oleg},
+           giveni={O\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {arXiv}%
+      }
+      \strng{namehash}{8d6613ae59595910252a86a61babf6c8}
+      \strng{fullhash}{a6c6ed5a5aeb74e536f16291276ae392}
+      \strng{fullhashraw}{a6c6ed5a5aeb74e536f16291276ae392}
+      \strng{bibnamehash}{8d6613ae59595910252a86a61babf6c8}
+      \strng{authorbibnamehash}{8d6613ae59595910252a86a61babf6c8}
+      \strng{authornamehash}{8d6613ae59595910252a86a61babf6c8}
+      \strng{authorfullhash}{a6c6ed5a5aeb74e536f16291276ae392}
+      \strng{authorfullhashraw}{a6c6ed5a5aeb74e536f16291276ae392}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{We propose a new family of policy gradient methods for reinforcement learning, which alternate between sampling data through interaction with the environment, and optimizing a " surrogate" objective function using stochastic gradient ascent. Whereas standard policy gradient methods perform one gradient update per data sample, we propose a novel objective function that enables multiple epochs of minibatch updates. The new methods, which we call proximal policy optimization (PPO), have some of the benefits of trust region policy optimization (TRPO), but they are much simpler to implement, more general, and have better sample complexity (empirically). Our experiments test PPO on a collection of benchmark tasks, including simulated robotic locomotion and Atari game playing, and we show that PPO outperforms other online policy gradient methods, and overall strikes a favorable balance between sample complexity, simplicity, and wall-time.}
+      \field{month}{8}
+      \field{note}{arXiv:1707.06347}
+      \field{title}{Proximal Policy Optimization Algorithms}
+      \field{urlday}{18}
+      \field{urlmonth}{4}
+      \field{urlyear}{2026}
+      \field{year}{2017}
+      \field{urldateera}{ce}
+      \true{nocite}
+      \verb{doi}
+      \verb 10.48550/arXiv.1707.06347
+      \endverb
+      \verb{urlraw}
+      \verb http://arxiv.org/abs/1707.06347
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/1707.06347
+      \endverb
+      \keyw{Computer Science - Machine Learning}
+    \endentry
+    \entry{tromp_chess_2026}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=111e5b8cd5b7bd6ab0ec4055ff963da9}{%
+           family={Tromp},
+           familyi={T\bibinitperiod},
+           given={John},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{111e5b8cd5b7bd6ab0ec4055ff963da9}
+      \strng{fullhash}{111e5b8cd5b7bd6ab0ec4055ff963da9}
+      \strng{fullhashraw}{111e5b8cd5b7bd6ab0ec4055ff963da9}
+      \strng{bibnamehash}{111e5b8cd5b7bd6ab0ec4055ff963da9}
+      \strng{authorbibnamehash}{111e5b8cd5b7bd6ab0ec4055ff963da9}
+      \strng{authornamehash}{111e5b8cd5b7bd6ab0ec4055ff963da9}
+      \strng{authorfullhash}{111e5b8cd5b7bd6ab0ec4055ff963da9}
+      \strng{authorfullhashraw}{111e5b8cd5b7bd6ab0ec4055ff963da9}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Software suite for ranking chess positions and accurately estimating the number of legal chess positions}
+      \field{month}{8}
+      \field{note}{original-date: 2021-07-19T13:41:33Z}
+      \field{title}{Chess {Position} {Ranking}}
+      \field{urlday}{18}
+      \field{urlmonth}{4}
+      \field{urlyear}{2026}
+      \field{year}{2021}
+      \field{urldateera}{ce}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://github.com/tromp/ChessPositionRanking
+      \endverb
+      \verb{url}
+      \verb https://github.com/tromp/ChessPositionRanking
+      \endverb
+      \keyw{haskell,chess,random,sampling}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+
