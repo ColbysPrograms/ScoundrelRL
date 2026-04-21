@@ -1,5 +1,6 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1776672349
+::res://::1776753713
+export_presets.cfg::TextFile::-1::1776672520::0::1::::<><><>0<>0<><>::
 ::res://Assets/::1771810846
 Back.png::CompressedTexture2D::3844770681210489543::1771810846::1771810846::1::::<><><>0<>0<>b8eb02b8cc5806dc6d264ec6c2b2854d<>res://.godot/imported/Back.png-003873f212769b19c5e04973e4aaf959.ctex::
 Base.png::CompressedTexture2D::7627216923367529343::1771810846::1771810846::1::::<><><>0<>0<>69c0fd14f72a30622c44b2ce5ca6a285<>res://.godot/imported/Base.png-db720ff805d14f2b41f15a8465dbfd58.ctex::
